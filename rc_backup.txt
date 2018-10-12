@@ -1,0 +1,4 @@
+
+# Add lucene executables to classpath (delete this to reset classpath)
+export CLASSPATH=/home/kevin/MSC/IR/lucene-7.5.0/core/lucene-core-7.5.0.jar:/home/kevin/MSC/IR/lucene-7.5.0/queryparser/lucene-queryparser-7.5.0.jar:/home/kevin/MSC/IR/lucene-7.5.0/analysis/common/lucene-analyzers-common-7.5.0.jar:/home/kevin/MSC/IR/lucene-7.5.0/demo/lucene-demo-7.5.0.jar
+
