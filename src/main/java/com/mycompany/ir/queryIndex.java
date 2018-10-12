@@ -37,7 +37,7 @@ import org.apache.lucene.search.similarities.*;
 public class queryIndex {
 
 	// the location of the search index
-	private static String INDEX_DIRECTORY = "/home/kevin/MSC/IR/ir/Test";
+	private static String INDEX_DIRECTORY = "/home/kevin/MSC/IR/InformationRetrieval/Test";
 	// Limit the number of search results we get
 	private static int MAX_RESULTS = 30;
 
@@ -52,7 +52,7 @@ public class queryIndex {
 		// create objects to read and search across the index
 		DirectoryReader ireader = DirectoryReader.open(directory);
 		IndexSearcher isearcher = new IndexSearcher(ireader);
-		isearcher.setSimilarity(new ClassicSimilarity());
+		isearcher.setSimilarity(new BM25Similarity());
 		Map<String, Float> boost = boost();
 
 		MultiFieldQueryParser parser = new MultiFieldQueryParser(new String[]

@@ -33,7 +33,7 @@ import org.apache.lucene.search.similarities.*;
 public class createIndex {
 
 	// Directory where the search index will be saved
-	private static String INDEX_DIRECTORY = "/home/kevin/MSC/IR/ir/Test";
+	private static String INDEX_DIRECTORY = "/home/kevin/MSC/IR/InformationRetrieval/Test";
 
 	public static void main(String[] args) throws IOException {
 		// Make sure we were given something to index
@@ -52,7 +52,7 @@ public class createIndex {
 		Directory directory = FSDirectory.open(Paths.get(INDEX_DIRECTORY));
 
   		// Set up an index writer to add process and save documents to the index
-  		IndexWriterConfig config =  createIndex(analyzer, "Classic");
+  		IndexWriterConfig config =  createIndex(analyzer, "BM25");
   		config.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
   		IndexWriter iwriter = new IndexWriter(directory, config);
 
