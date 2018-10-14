@@ -42,15 +42,13 @@ public class createIndex {
             System.exit(1);
         }
 
-		CharArraySet stopwords = CharArraySet.copy(StopAnalyzer.ENGLISH_STOP_WORDS_SET);
-		// Analyzer that is used to process TextField
-		Analyzer analyzer = new tokenizeAnalyser(stopwords);
+			CharArraySet stopwords = CharArraySet.copy(StopAnalyzer.ENGLISH_STOP_WORDS_SET);
+			// Analyzer that is used to process TextField
+			Analyzer analyzer = new tokenizeAnalyser(stopwords);
 		// ArrayList of documents in the corpus
-		ArrayList<Document> documents = new ArrayList<Document>();
-
-		// Open the directory that contains the search index
-		Directory directory = FSDirectory.open(Paths.get(INDEX_DIRECTORY));
-
+			ArrayList<Document> documents = new ArrayList<Document>();
+			// Open the directory that contains the search index
+			Directory directory = FSDirectory.open(Paths.get(INDEX_DIRECTORY));
   		// Set up an index writer to add process and save documents to the index
   		IndexWriterConfig config =  createIndex(analyzer, "BM25");
   		config.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
