@@ -114,10 +114,10 @@ public class queryIndex {
 
 	public static Map<String, Float> boost(){
 		Map<String, Float> boostMap = new HashMap();
-		boostMap.put("title", (float) 0.45);
-		boostMap.put("author", (float) 0.11);
+		boostMap.put("title", (float) 0.34);
+		boostMap.put("author", (float) 0.01);
 		boostMap.put("bibl", (float) 0.02);
-		boostMap.put("content", (float) 0.41);
+		boostMap.put("content", (float) 0.62);
 		return boostMap;
 	}
 

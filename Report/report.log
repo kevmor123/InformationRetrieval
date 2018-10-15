@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  14 OCT 2018 20:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  15 OCT 2018 20:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**sample-acmtog.tex
-(./sample-acmtog.tex
+**report.tex
+(./report.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 5 language(s) loaded.
 (./acmart.cls
@@ -649,24 +649,9 @@ Excluding comment 'screenonly' Include comment 'printonly'
 Include comment 'anonsuppress'
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
- (./sample-acmtog.aux
 
-LaTeX Warning: Label `fig:1' multiply defined.
-
-
-LaTeX Warning: Label `fig:1' multiply defined.
-
-
-LaTeX Warning: Label `fig:1' multiply defined.
-
-
-LaTeX Warning: Label `fig:1' multiply defined.
-
-
-LaTeX Warning: Label `table:weight' multiply defined.
-
-)
-\openout1 = `sample-acmtog.aux'.
+No file report.aux.
+\openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
@@ -686,7 +671,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 31.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 31.
@@ -731,10 +716,8 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 31.
 LaTeX Info: Redefining \pageref on input line 31.
 LaTeX Info: Redefining \nameref on input line 31.
-
-(./sample-acmtog.out) (./sample-acmtog.out)
 \@outlinefile=\write5
-\openout5 = `sample-acmtog.out'.
+\openout5 = `report.out'.
 
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -813,7 +796,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-<2.png, id=32, 774.895pt x 310.15875pt>
+<2.png, id=8, 774.895pt x 310.15875pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
 Package pdftex.def Info: 2.png  used on input line 13.
@@ -823,7 +806,7 @@ Overfull \hbox (8.6904pt too wide) in paragraph at lines 13--14
  [] 
  []
 
-<6.png, id=34, 483.8075pt x 91.34125pt>
+<6.png, id=10, 483.8075pt x 91.34125pt>
 File: 6.png Graphic file (type png)
 <use 6.png>
 Package pdftex.def Info: 6.png  used on input line 25.
@@ -834,7 +817,7 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<4.png, id=35, 443.6575pt x 154.5775pt>
+<4.png, id=11, 443.6575pt x 154.5775pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
 Package pdftex.def Info: 4.png  used on input line 51.
@@ -842,7 +825,7 @@ Package pdftex.def Info: 4.png  used on input line 51.
  [1.1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./2.png> <./6.png> <./4.png>]
-<5.png, id=57, 505.89pt x 57.21375pt>
+<5.png, id=36, 505.89pt x 57.21375pt>
 File: 5.png Graphic file (type png)
 <use 5.png>
 Package pdftex.def Info: 5.png  used on input line 75.
@@ -852,7 +835,7 @@ Overfull \hbox (9.79688pt too wide) in paragraph at lines 75--76
  [] 
  []
 
-<3.png, id=58, 723.70375pt x 280.04625pt>
+<3.png, id=37, 723.70375pt x 280.04625pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
 Package pdftex.def Info: 3.png  used on input line 85.
@@ -862,28 +845,54 @@ Overfull \hbox (10.15262pt too wide) in paragraph at lines 85--86
  [] 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+
+Overfull \hbox (1.71252pt too wide) in paragraph at lines 100--100
+[]\OT1/cmr/m/n/9 (-20) Similarities| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[]\OT1/cmr/m/n/9 (+20) Recip.
+ []
+
+
+Overfull \hbox (3.22437pt too wide) in paragraph at lines 104--104
+[]\OT1/cmr/m/n/9 (-20) lm[]dirichlet| 
+ []
+
 ) [2.2 <./5.png> <./3.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
- (./sample-acmtog.aux)
+ (./report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
-Package rerunfilecheck Info: File `sample-acmtog.out' has not changed.
-(rerunfilecheck)             Checksum: 97B91FF45359FC9CA05669C2280DCC91;676.
 
 
-LaTeX Warning: There were multiply-defined labels.
+Package rerunfilecheck Warning: File `report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `report.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  97B91FF45359FC9CA05669C2280DCC91;676.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  )
 (\end occurred when \iffalse on line 47 was incomplete) 
 Here is how much of TeX's memory you used:
- 16105 strings out of 494880
- 234424 string characters out of 6179600
- 387469 words of memory out of 5000000
- 18938 multiletter control sequences out of 15000+600000
- 12931 words of font info for 76 fonts, out of 8000000 for 9000
+ 16095 strings out of 494880
+ 234223 string characters out of 6179600
+ 389089 words of memory out of 5000000
+ 18932 multiletter control sequences out of 15000+600000
+ 12982 words of font info for 77 fonts, out of 8000000 for 9000
  197 hyphenation exceptions out of 8191
- 60i,11n,94p,847b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,94p,840b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/kevin/.texlive20
 17/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0700.600pk></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist
@@ -895,10 +904,10 @@ cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on sample-acmtog.pdf (2 pages, 288246 bytes).
+Output written on report.pdf (2 pages, 288814 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  16 named destinations out of 1000 (max. 500000)
- 16474 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 16426 words of extra memory for PDF output out of 17280 (max. 10000000)
 

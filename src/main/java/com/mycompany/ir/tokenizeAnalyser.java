@@ -22,6 +22,7 @@ public class tokenizeAnalyser extends StopwordAnalyzerBase {
   public CharArraySet getStopwords() {
     return stopwords;
   }
+
   @Override protected TokenStreamComponents createComponents(final String fieldName) {
     final Tokenizer source;
     StandardTokenizer tokens = new StandardTokenizer();
@@ -33,10 +34,6 @@ public class tokenizeAnalyser extends StopwordAnalyzerBase {
     TokenStream tokener = new StopFilter(token, myStopSet);
     tokener = new PorterStemFilter(tokener);
     return new TokenStreamComponents(source, tokener) {
-      @Override protected void setReader(final Reader reader) {
-        ((StandardTokenizer) source).setMaxTokenLength(256);
-        super.setReader(reader);
-      }
     };
   }
 }
