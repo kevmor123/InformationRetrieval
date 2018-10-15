@@ -1,12 +1,12 @@
 \section{Creating the Index}
 
-The first task was to create a Lucene Index on the Cranfield Documents. The main() method parses the command-line parameters, then in preparation for instantiating IndexWriter, opens a Directory, and instantiates StandardAnalyzer and IndexWriterConfig. The Cranfiled File to be indexed is imported from the command line providing the location of the document. The value INDEX\_DIRECTORY is the path of the filesystem directory where all index information should be stored.  \par 
+The first task was to create a Lucene Index on the Cranfield Documents. The main() method parses the command-line parameters, then in preparation for instantiating IndexWriter, opens a Directory, and instantiates StandardAnalyzer and IndexWriterConfig. The Cranfield File to be indexed is imported from the command line providing the location of the document. The value INDEX\_DIRECTORY is the path of the filesystem directory where all index information should be stored.  \par 
 
-Inorder to index and process all the docuemtns I created a parser for the Cranfield file .The Cranfield file was a list of documents where each document had a Title (I.), Author (A.), Bibliography (B.) and the Context (W.). The parser would read the file in line by line. Each line would be added to an variable depending on the field. Once the parser looped back to a Title context, a new document would be created. \par 
+In order to index and process all the documents I created a parser for the Cranfield file .The Cranfield file was a list of documents where each document had a Title (I.), Author (A.), Bibliography (B.) and the Context (W.). The parser would read the file in line by line. Each line would be added to a variable depending on the field. Once the parser looped back to a Title context, a new document would be created. \par 
 	
-Upon completion of all the documents being created, they were added to an ``IndexWriter" object and also written to a Directory. This directory was analysed applying a  a modified Analyzer which I created. \par
+Upon completion of all the documents being created, they were added to an ``IndexWriter" object and also written to a Directory. This directory was analysed applying a modified Analyzer which I created. \par
 
-This analyser normalised characters to lower case, removed stop words and stemmed the words. Removing the stop words were words taken from the ENGLISH\_STOP\_WORDS\_SET in the ``StopAnalyser" libray. The ``PorterStemFilter" library was used to stem the words when being indexed.   \newline
+This analyser normalised characters to lower case, removed stop words and stemmed the words. Removing the stop words were words taken from the ENGLISH\_STOP\_WORDS\_SET in the ``StopAnalyser" library. The ``PorterStemFilter" library was used to stem the words when being indexed.   \newline
 
 	\begin{figure}[ht!]
 		\begin{center}
@@ -28,7 +28,7 @@ Once I created the Index I began to create a method to search the index. With th
 		\end{center}
 	\end{figure} \par
   
-In order to determine the weighting for each field, a number of tests were done to find the most accurate weightings to give the best results. From previous experience of searching for books, I would rarely use the Author or Bilbiography to search for a speicfic book so I gave them a lower weighting of importance. The title and context were the main fields so they had a much higher weighting. \par
+In order to determine the weighting for each field, a number of tests were done to find the most accurate weightings to give the best results. From previous experience of searching for books, I would rarely use the Author or Bilbiography to search for a specfic book so I gave them a lower weighting of importance. The title and context were the main fields so they had a much higher weighting. \par
 
 	\begin{table}[H]
 		\centering
@@ -38,7 +38,7 @@ In order to determine the weighting for each field, a number of tests were done 
 			Title 				& .34 \\ \hline
 			Author 				& .01 \\ \hline
 			Bibliography 		& .02 \\ \hline
-			Content 			& .62 \\ \hline
+			Context 			& .62 \\ \hline
 		\end{tabular}
 		\caption{Weight of each field}
 		\label{table:weight}
@@ -108,7 +108,7 @@ Using trec\_eval I was able to get the results of each of the scoring methods. t
 \end{table}
 	
 \newpage	
-The BM25 similarity is the lucene scoring method that gives the best results and the boolean similarity is giving the worst results when evaluating against the optimal results. The boolean similarity gave the worst results as it only scores a document if it matches the query fully. This leaves gaps in the infroamtion retreived. BM25 is a improved version of Classic similarity as it uses a score for determining it will find a certain document relevant when scoring the documents. \par 
+The BM25 similarity is the lucene scoring method that gives the best results and the boolean similarity is giving the worst results when evaluating against the optimal results. The boolean similarity gave the worst results as it only scores a document if it matches the query fully. This leaves gaps in the information retrieved. BM25 is an improved version of Classic similarity as it uses a score for determining it will find a certain document relevant when scoring the documents. \par 
 
 \section{Conclusion}
-From creating a Search Engine in Lucene, I was able to gain a valuable insight into the Information Retrieval process in a larger scale. It allowed me to see the significant change in results when improving the analyser to allow for stop word removal and stemming  the words. Testing the different scoring methods was a great way to explore the Lucene libraries and methods.\par 
+From creating a Search Engine in Lucene, I was able to gain a valuable insight into the information retrieval process in a larger scale. It allowed me to see the significant change in results when improving the analyser to allow for stop word removal and stemming  the words. Testing the different scoring methods was a great way to explore the Lucene libraries and methods.\par 
