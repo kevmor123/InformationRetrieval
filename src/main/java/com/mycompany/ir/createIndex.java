@@ -33,7 +33,7 @@ import org.apache.lucene.search.similarities.*;
 public class createIndex {
 
 	// Directory where the search index will be saved
-	private static String INDEX_DIRECTORY = "/home/kevin/MSC/IR/InformationRetrieval/Test";
+	private static String INDEX_DIRECTORY = "../Test";
 
 	public static void main(String[] args) throws IOException {
 		// Make sure we were given something to index

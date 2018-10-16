@@ -37,7 +37,7 @@ import org.apache.lucene.search.similarities.*;
 public class queryIndex {
 
 	// the location of the search index
-	private static String INDEX_DIRECTORY = "/home/kevin/MSC/IR/InformationRetrieval/Test";
+	private static String INDEX_DIRECTORY = "../Test";
 	// Limit the number of search results we get
 	private static int MAX_RESULTS = 30;
 
