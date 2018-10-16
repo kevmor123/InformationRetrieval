@@ -123,7 +123,7 @@ public class queryIndex {
 
 	public static void writeToFile(String text) {
 		try {
-			File file = new File("results.txt");
+			File file = new File("Output/results.txt");
 			FileWriter fileWriter = new FileWriter(file);
 			fileWriter.write(text);
 			fileWriter.flush();
