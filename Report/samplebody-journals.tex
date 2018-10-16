@@ -112,3 +112,19 @@ The BM25 similarity is the lucene scoring method that gives the best results and
 
 \section{Conclusion}
 From creating a Search Engine in Lucene, I was able to gain a valuable insight into the information retrieval process in a larger scale. It allowed me to see the significant change in results when improving the analyser to allow for stop word removal and stemming  the words. Testing the different scoring methods was a great way to explore the Lucene libraries and methods.\par 
+
+\section{Set Up}
+createIndex.jar: creates an index of the cran collection, and stores in disk.
+
+To execute this file, run the following command:
+java -jar createIndex.jar
+
+queryIndex.jar: searches through the index, and returns results. The output results are stored in output directory.
+
+To execute this file, run the following command:
+java -jar queryIndex.jar
+
+The files present in output directory, namely QRels.txt and results.txt can be used to evaluate metrics using TREC Eval tool.
+
+The command is as follows:
+../trec\_eval.9.0/trec\_eval output/QRels.txt output/results.txt

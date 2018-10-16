@@ -13,5 +13,5 @@ To execute this file, run the following command:<br/>
 The files present in output directory, namely QRels.txt and results.txt can be used to evaluate metrics using TREC Eval tool.<br/>
 
 The command is as follows:<br/>
-```../trec_eval.9.0/trec_eval output/QRels.txt output/results.txt```
+```../trec_eval output/QRels.txt output/results.txt```
 
