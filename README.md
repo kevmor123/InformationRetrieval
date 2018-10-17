@@ -19,6 +19,5 @@ The command is as follows:<br/>
 To change the similarity method:<br/>
 In the createIndex file replace the string input in this line of
 code to the preferred similarity:
-```IndexWriterConfig config = createIndex(analyzer, ”enter
-here”);```
+```IndexWriterConfig config = createIndex(analyzer, ”enter here”);```
 
