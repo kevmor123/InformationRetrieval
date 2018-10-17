@@ -31,9 +31,8 @@ import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.search.similarities.*;
 
 public class createIndex {
-
 	// Directory where the search index will be saved
-	private static String INDEX_DIRECTORY = "../Test";
+	private static String INDEX_DIRECTORY = "../InformationRetrieval/index";
 
 	public static void main(String[] args) throws IOException {
 		// Make sure we were given something to index
