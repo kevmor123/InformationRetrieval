@@ -62,15 +62,12 @@ public class createIndex {
         String temp = br.readLine();
         Document doc;
         String docType = "";
-				String index = "index";
 				int count = 0;
         while(temp != null){
           if(temp.substring(0,2).equals(".I")){
             doc = new Document();
 						count++;
 						doc.add(new StringField("index", Integer.toString(count) , Field.Store.YES));
-            Field pathField = new StringField("path", temp, Field.Store.YES);
-            doc.add(pathField);
             temp = br.readLine();
             while(!(temp.substring(0,2).equals(".I"))){
               if(temp.substring(0,2).equals(".T")){
