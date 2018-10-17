@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  16 OCT 2018 15:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  17 OCT 2018 11:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -641,7 +641,7 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \mc@col@check@num=\count144
 )
 Class acmart Info: Using journal code tog on input line 13.
-Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 31.
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 30.
 
 \c@theorem=\count145
 
@@ -665,40 +665,40 @@ LaTeX Warning: Label `fig:1' multiply defined.
 )
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 30.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    ... okay on input line 30.
 <<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 31.
+LaTeX Font Info:    Try loading font information for U+msa on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 31.
+LaTeX Font Info:    Try loading font information for U+msb on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Info: Redefining \microtypecontext on input line 31.
+LaTeX Info: Redefining \microtypecontext on input line 30.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -715,7 +715,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring OFF on input line 31.
+Package hyperref Info: Link coloring OFF on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -725,9 +725,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count146
 )
-LaTeX Info: Redefining \ref on input line 31.
-LaTeX Info: Redefining \pageref on input line 31.
-LaTeX Info: Redefining \nameref on input line 31.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
 
 (./report.out) (./report.out)
 \@outlinefile=\write5
@@ -806,36 +806,28 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 (./samplebody-journals.tex
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-
- []
-
-<2.png, id=36, 774.895pt x 310.15875pt>
+<2.png, id=36, 594.22pt x 285.065pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
 Package pdftex.def Info: 2.png  used on input line 13.
-(pdftex.def)             Requested size: 251.83789pt x 100.8004pt.
-
-Overfull \hbox (8.6904pt too wide) in paragraph at lines 13--14
- [] 
- []
-
-<6.png, id=38, 483.8075pt x 91.34125pt>
+(pdftex.def)             Requested size: 237.68379pt x 114.02397pt.
+<6.png, id=38, 441.65pt x 90.3375pt>
 File: 6.png Graphic file (type png)
 <use 6.png>
 Package pdftex.def Info: 6.png  used on input line 25.
-(pdftex.def)             Requested size: 241.90315pt x 45.6705pt.
+(pdftex.def)             Requested size: 220.82445pt x 45.16862pt.
+
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<4.png, id=39, 443.6575pt x 154.5775pt>
+<4.png, id=39, 480.79625pt x 157.58875pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
 Package pdftex.def Info: 4.png  used on input line 51.
-(pdftex.def)             Requested size: 177.45984pt x 61.8299pt.
+(pdftex.def)             Requested size: 192.31508pt x 63.03436pt.
  [1.1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./2.png> <./6.png> <./4.png>]
@@ -875,16 +867,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--100
  []
 
 
-Overfull \hbox (3.22437pt too wide) in paragraph at lines 104--104
+Overfull \hbox (3.22437pt too wide) in paragraph at lines 103--103
 []\OT1/cmr/m/n/9 (-20) lm[]dirichlet| 
  []
 
+
+Overfull \hbox (7.35767pt too wide) in paragraph at lines 130--131
+\OT1/cmr/bx/n/9 Results\OT1/cmr/m/n/9 (-20) : The files present in out-put di-r
+ec-tory, namely QRels.txt
+ []
+
 ) [2.2 <./5.png> <./3.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 7213A3BCFFCB035B3758943C945ECF47;765.
 
@@ -892,13 +890,13 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 LaTeX Warning: There were multiply-defined labels.
 
  )
-(\end occurred when \iffalse on line 47 was incomplete) 
+(\end occurred when \iffalse on line 45 was incomplete) 
 Here is how much of TeX's memory you used:
- 16114 strings out of 494880
- 234404 string characters out of 6179600
+ 16120 strings out of 494880
+ 234444 string characters out of 6179600
  389496 words of memory out of 5000000
  18940 multiletter control sequences out of 15000+600000
- 13084 words of font info for 79 fonts, out of 8000000 for 9000
+ 13237 words of font info for 82 fonts, out of 8000000 for 9000
  197 hyphenation exceptions out of 8191
  60i,11n,94p,840b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/kevin/.texlive20
@@ -912,7 +910,7 @@ cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on report.pdf (2 pages, 290396 bytes).
+Output written on report.pdf (2 pages, 263486 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream

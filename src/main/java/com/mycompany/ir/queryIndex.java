@@ -53,10 +53,10 @@ public class queryIndex {
 		DirectoryReader ireader = DirectoryReader.open(directory);
 		IndexSearcher isearcher = new IndexSearcher(ireader);
 		isearcher.setSimilarity(new BM25Similarity());
-		Map<String, Float> boost = boost();
+		Map<String, Float> weight = weigth();
 
 		MultiFieldQueryParser parser = new MultiFieldQueryParser(new String[]
-		 {"title", "author", "bibl", "content"}, analyzer, boost);
+		 {"title", "author", "bibl", "content"}, analyzer, weight);
 
 		String queryText = "";
 		int tmp = 1;
@@ -112,13 +112,13 @@ public class queryIndex {
 		directory.close();
 	}
 
-	public static Map<String, Float> boost(){
-		Map<String, Float> boostMap = new HashMap();
-		boostMap.put("title", (float) 0.34);
-		boostMap.put("author", (float) 0.01);
-		boostMap.put("bibl", (float) 0.02);
-		boostMap.put("content", (float) 0.62);
-		return boostMap;
+	public static Map<String, Float> weight(){
+		Map<String, Float> weigthingMap = new HashMap();
+		weigthingMap.put("title", (float) 0.34);
+		weigthingMap.put("author", (float) 0.01);
+		weigthingMap.put("bibl", (float) 0.02);
+		weigthingMap.put("content", (float) 0.62);
+		return weigthingMap;
 	}
 
 	public static void writeToFile(String text) {

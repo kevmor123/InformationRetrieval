@@ -6,11 +6,11 @@ In order to index and process all the documents I created a parser for the Cranf
 	
 Upon completion of all the documents being created, they were added to an ``IndexWriter" object and also written to a Directory. This directory was analysed applying a modified Analyzer which I created. \par
 
-This analyser normalised characters to lower case, removed stop words and stemmed the words. Removing the stop words were words taken from the ENGLISH\_STOP\_WORDS\_SET in the ``StopAnalyser" library. The ``PorterStemFilter" library was used to stem the words when being indexed.   \newline
+This analyser normalised characters to lower case, removed stop words and stemmed the words. Removing the stop words were words taken from the ENGLISH\_STOP\_WORDS\_SET in the ``StopAnalyser" library. The ``PorterStemFilter" library was used to stem the words when being indexed.  \par
 
 	\begin{figure}[ht!]
 		\begin{center}
-			\includegraphics[scale=.325 ]{2} 
+			\includegraphics[scale=.4 ]{2} 
 			\caption{Code Snippet of the anlayser used to stem and remove stop words}
 			\label{fig:1}
 		\end{center}
@@ -57,7 +57,7 @@ The queries were parsed from the ``cran.qry" file. They were then, just like the
 \newpage
 \section{Scoring}
 
-The ``IndexWriterConfig" has a method called ``setSimilarity" which sets the type of Lucene scoring that you would like to use. Similarity defines the components of Lucene scoring. From research the main four lucene scoring methods are: \par
+The ``IndexWriterConfig" contains a method called ``setSimilarity" which sets the type of Lucene scoring that you would like to use. Similarity defines the components of Lucene scoring. From research the main four lucene scoring methods are: \par
 		
 	\begin{multicols}{2}
 		\begin{itemize}
@@ -100,8 +100,9 @@ Using trec\_eval I was able to get the results of each of the scoring methods. t
 	\hline Similarities & MAP & P30 & Recip. Rank & Recall \\ \hline
 			BM25 					& 0.4067  & 0.1533 & 0.8262 & 0.8383 \\ \hline
 			Classic 				& 0.3790  & 0.1481 & 0.7991 & 0.8148 \\ \hline
+			lm\_dirichlet 			& 0.3096  & 0.1252 & 0.6958 & 0.7104 \\ \hline
 			Boolean 				& 0.3006  & 0.1261 & 0.7072 & 0.7260 \\ \hline
-			lm\_dirichlet 			& 0.3096 & 0.1252 & 0.0.6958 & 0.7104 \\ \hline
+			
 	\end{tabular} 
 	\caption{Results of each similarity lucence scoring}
 	\label{table:results}
@@ -114,17 +115,35 @@ The BM25 similarity is the lucene scoring method that gives the best results and
 From creating a Search Engine in Lucene, I was able to gain a valuable insight into the information retrieval process in a larger scale. It allowed me to see the significant change in results when improving the analyser to allow for stop word removal and stemming  the words. Testing the different scoring methods was a great way to explore the Lucene libraries and methods.\par 
 
 \section{Set Up}
-createIndex.jar: creates an index of the cran collection, and stores in disk.
+\textbf{createIndex.jar}: creates an index of the cran collection, and stores in disk. To execute this file, run the following command:
 
-To execute this file, run the following command:
-java -jar createIndex.jar
+\begin{center} 
+ java -jar createIndex.jar \newline
+\end{center}
 
-queryIndex.jar: searches through the index, and returns results. The output results are stored in output directory.
+\noindent \textbf{queryIndex.jar}: searches through the index, and returns results. The output results are stored in output directory. To execute this file, run the following command:
 
-To execute this file, run the following command:
-java -jar queryIndex.jar
+\begin{center} 
+ java -jar queryIndex.jar \newline
+\end{center}
 
-The files present in output directory, namely QRels.txt and results.txt can be used to evaluate metrics using TREC Eval tool.
+\noindent \textbf{Results}: The files present in output directory, namely QRels.txt and results.txt can be used to evaluate metrics using TREC Eval tool. The command is as follows:
 
-The command is as follows:
-../trec\_eval.9.0/trec\_eval output/QRels.txt output/results.txt
+\begin{center} 
+.. trec\_eval output/QRels.txt output/results.txt \newline
+\end{center}
+
+\noindent \textbf{To change the similarity method}: 
+
+\noindent In the createIndex file replace the string input in this line of code to the preferred similarity:
+	
+\begin{center} 
+	IndexWriterConfig config =  createIndex(analyzer, "enter here"); \newline
+\end{center}
+
+\noindent In the queryIndex file replace this line of code to the preferred similarity: 
+
+\begin{center} 
+	isearcher.setSimilarity(new BM25Similarity()); \newline
+\end{center}
+
