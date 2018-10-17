@@ -53,7 +53,7 @@ public class queryIndex {
 		DirectoryReader ireader = DirectoryReader.open(directory);
 		IndexSearcher isearcher = new IndexSearcher(ireader);
 		isearcher.setSimilarity(new BM25Similarity());
-		Map<String, Float> weight = weigth();
+		Map<String, Float> weight = weight();
 
 		MultiFieldQueryParser parser = new MultiFieldQueryParser(new String[]
 		 {"title", "author", "bibl", "content"}, analyzer, weight);
