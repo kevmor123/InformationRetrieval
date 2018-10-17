@@ -15,3 +15,10 @@ The files present in output directory, namely QRels.txt and results.txt can be u
 The command is as follows:<br/>
 ```../trec_eval output/QRels.txt output/results.txt```
 
+
+To change the similarity method:<br/>
+In the createIndex file replace the string input in this line of
+code to the preferred similarity:
+```IndexWriterConfig config = createIndex(analyzer, ”enter
+here”);```
+
