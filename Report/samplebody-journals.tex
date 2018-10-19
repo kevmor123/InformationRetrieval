@@ -6,7 +6,7 @@ In order to index and process all the documents I created a parser for the Cranf
 	
 Upon completion of all the documents being created, they were added to an ``IndexWriter" object and also written to a Directory. This directory was analysed applying a modified Analyzer which I created. \par
 
-This analyser normalised characters to lower case, removed stop words and stemmed the words. Removing the stop words were words taken from the ENGLISH\_STOP\_WORDS\_SET in the ``StopAnalyser" library. The ``PorterStemFilter" library was used to stem the words when being indexed.  \par
+The analyser in which I created will remove stop words, stem the words and normalise the characters all to lower case. Removing the stop words were words taken from the ENGLISH\_STOP\_WORDS\_SET in the ``StopAnalyser" library. The ``PorterStemFilter" library was used to stem the words when being indexed.  \par
 
 	\begin{figure}[ht!]
 		\begin{center}
@@ -109,7 +109,7 @@ Using trec\_eval I was able to get the results of each of the scoring methods. t
 \end{table}
 	
 \newpage	
-The BM25 similarity is the lucene scoring method that gives the best results and the boolean similarity is giving the worst results when evaluating against the optimal results. The boolean similarity gave the worst results as it only scores a document if it matches the query fully. This leaves gaps in the information retrieved. BM25 is an improved version of Classic similarity as it uses a score for determining it will find a certain document relevant when scoring the documents. \par 
+The BM25 similarity is the lucene scoring method that gives the best results and the boolean similarity is giving the worst results when evaluating against the optimal results.  BM25 is an improved version of Classic similarity as it uses a score for determining it will find a certain document relevant when scoring the documents. The boolean similarity gave the worst results as it only scores a document if it matches the query fully. This leaves gaps in the information retrieved. \par 
 
 \section{Conclusion}
 From creating a Search Engine in Lucene, I was able to gain a valuable insight into the information retrieval process in a larger scale. It allowed me to see the significant change in results when improving the analyser to allow for stop word removal and stemming  the words. Testing the different scoring methods was a great way to explore the Lucene libraries and methods.\par 
