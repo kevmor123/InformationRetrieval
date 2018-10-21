@@ -2,7 +2,7 @@
 
 The first task was to create a Lucene Index on the Cranfield Documents. The main() method parses the command-line parameters, then in preparation for instantiating IndexWriter, opens a Directory, and instantiates StandardAnalyzer and IndexWriterConfig. The Cranfield File to be indexed is imported from the command line providing the location of the document. The value INDEX\_DIRECTORY is the path of the filesystem directory where all index information should be stored.  \par 
 
-In order to index and process all the documents I created a parser for the Cranfield file .The Cranfield file was a list of documents where each document had a Title (I.), Author (A.), Bibliography (B.) and the Context (W.). The parser would read the file in line by line. Each line would be added to a variable depending on the field. Once the parser looped back to a Title context, a new document would be created. \par 
+In order to index and process all the documents I created a parser for the Cranfield file .The Cranfield file was a list of documents where each document had a Title (I.), Author (A.), Bibliography (B.) and the Context (W.). The parser reads the file each line at a time. Each line would be added to a variable depending on the field. Once the parser looped back to a Title context, a new document would be created. \par 
 	
 Upon completion of all the documents being created, they were added to an ``IndexWriter" object and also written to a Directory. This directory was analysed applying a modified Analyzer which I created. \par
 
@@ -44,7 +44,7 @@ In order to determine the weighting for each field, a number of tests were done 
 		\label{table:weight}
 	\end{table}
 
-The queries were parsed from the ``cran.qry" file. They were then, just like the index file were then stemmed and removed stop words using the customised Analyser. Once all the queries were in the same format as the index file they were then put into the ``IndexSearcher" which searched the index for each query and returned all the matching documents. The max amount of results to be returned was set to 30.
+The queries were parsed from the ``cran.qry" file. They were then, just like the index file were then stemmed and removed stop words using the customised Analyser. The queries will then be in the same format and as the index file and can then be put into the ``IndexSearcher" which searched the index for each query and returned all the matching documents. The max amount of results to be returned was set to 30.
 
 	\begin{figure}[ht!]
 		\begin{center}
@@ -96,12 +96,12 @@ Using trec\_eval I was able to get the results of each of the scoring methods. t
 
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|p{1.5cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|}
-	\hline Similarities & MAP & P30 & Recip. Rank & Recall \\ \hline
-			BM25 					& 0.4067  & 0.1533 & 0.8262 & 0.8383 \\ \hline
-			Classic 				& 0.3790  & 0.1481 & 0.7991 & 0.8148 \\ \hline
-			lm\_dirichlet 			& 0.3096  & 0.1252 & 0.6958 & 0.7104 \\ \hline
-			Boolean 				& 0.3006  & 0.1261 & 0.7072 & 0.7260 \\ \hline
+	\begin{tabular}{|p{1.5cm}|p{1.25cm}|p{1.25cm}|}
+	\hline Similarities & MAP  & Recall \\ \hline
+			BM25 					& 0.4067  & 0.8383 \\ \hline
+			Classic 				& 0.3790  & 0.8148 \\ \hline
+			lm\_dirichlet 			& 0.3096  & 0.7104 \\ \hline
+			Boolean 				& 0.3006  & 0.7260 \\ \hline
 			
 	\end{tabular} 
 	\caption{Results of each similarity lucence scoring}
@@ -120,16 +120,16 @@ From creating a Search Engine in Lucene, I was able to gain a valuable insight i
 .eu-west-1.compute.amazonaws \newline .com \newline
 
 
-\noindent \textbf{createIndex.jar}: creates an index of the cran collection, and stores in disk. To execute this file, run the following command:
+\noindent \textbf{createIndex.java}: creates an index of the cran collection, and stores in disk. To execute this file, run the following command:
 
 \begin{center} 
- java -jar createIndex.jar \newline
+ java -cp target/ir-1.0-SNAPSHOT.jar com.mycompany.ir.createIndex InformationRetrieval/Cranfield/cran.qry \newline
 \end{center}
 
-\noindent \textbf{queryIndex.jar}: searches through the index, and returns results. The output results are stored in output directory. To execute this file, run the following command:
+\noindent \textbf{queryIndex.java}: searches through the index, and returns results. To execute this file, run the following command:
 
 \begin{center} 
- java -jar queryIndex.jar \newline
+ java -cp target/ir-1.0-SNAPSHOT.jar com.mycompany.ir.queryIndex InformationRetrieval/Cranfield/cran.qry \newline
 \end{center}
 
 \noindent \textbf{Results}: The files present in output directory, namely QRels.txt and results.txt can be used to evaluate metrics using TREC Eval tool. The command is as follows:
